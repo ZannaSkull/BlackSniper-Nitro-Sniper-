@@ -20,8 +20,6 @@ The bot can be used in two ways:
 
 - Run the bot with the configuration file config.toml
 - Run the bot with the -t and -w parameters to specify the Discord token and webhook URL   
-
 Example : 
-(```) 
+```bash
 go run main.go -t token -w gamingwebhook
-(```)
