@@ -9,10 +9,10 @@ Using fasthttp + webhook support
 
 # Requirements
 
-Dependencies
-A valid Discord token
-A valid webhook URL
-Go (version 1.14 or higher)
+- Dependencies
+- A valid Discord token
+- A valid webhook URL
+- Go (version 1.14 or higher)
 
 
 # Usage
