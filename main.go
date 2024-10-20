@@ -44,7 +44,7 @@ func init() {
 		}
 
 		Token = config.Token
-		WebhookURL = config.WebhookURL // Set the WebhookURL from config
+		WebhookURL = config.WebhookURL 
 	} else {
 		flag.StringVar(&Token, "t", "", "Discord Token")
 		flag.StringVar(&WebhookURL, "w", "", "Webhook URL")
@@ -144,10 +144,10 @@ func redeemNitroGift(code, channelID string) {
 	body := resp.Body()
 	if resp.StatusCode() >= 200 && resp.StatusCode() < 300 {
 		fmt.Println("✨ Successfully claimed code:", code, string(body))
-		go sendWebhook("Functional code: " + code) // Invio del webhook in modo concorrente
+		go sendWebhook("Functional code: " + code)
 	} else {
 		fmt.Println("⛔ Couldn't claim code:", code, string(body))
-		go sendWebhook("Invalid code: " + code) // Invio del webhook in modo concorrente
+		go sendWebhook("Invalid code: " + code)
 	}
 
 	fmt.Println("🛠️  Request :", time.Since(start))
